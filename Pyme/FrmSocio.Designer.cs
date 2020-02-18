@@ -40,7 +40,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.LblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbPuestoLaboral = new System.Windows.Forms.ComboBox();
+            this.cmbPorcentaje = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnAtras
@@ -148,22 +148,22 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Agregue socio a la empresa\r\n";
             // 
-            // cmbPuestoLaboral
+            // cmbPorcentaje
             // 
-            this.cmbPuestoLaboral.FormattingEnabled = true;
-            this.cmbPuestoLaboral.Location = new System.Drawing.Point(302, 321);
-            this.cmbPuestoLaboral.Name = "cmbPuestoLaboral";
-            this.cmbPuestoLaboral.Size = new System.Drawing.Size(121, 21);
-            this.cmbPuestoLaboral.TabIndex = 29;
-            this.cmbPuestoLaboral.Tag = "Freelance";
-            this.cmbPuestoLaboral.SelectedIndexChanged += new System.EventHandler(this.cmbPuestoLaboral_SelectedIndexChanged);
+            this.cmbPorcentaje.FormattingEnabled = true;
+            this.cmbPorcentaje.Location = new System.Drawing.Point(302, 321);
+            this.cmbPorcentaje.Name = "cmbPorcentaje";
+            this.cmbPorcentaje.Size = new System.Drawing.Size(121, 21);
+            this.cmbPorcentaje.TabIndex = 29;
+            this.cmbPorcentaje.Tag = "Freelance";
+            this.cmbPorcentaje.SelectedIndexChanged += new System.EventHandler(this.cmbPorcentaje_SelectedIndexChanged);
             // 
             // FrmSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cmbPuestoLaboral);
+            this.Controls.Add(this.cmbPorcentaje);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAgregar);
@@ -198,6 +198,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbPuestoLaboral;
+        private System.Windows.Forms.ComboBox cmbPorcentaje;
     }
 }

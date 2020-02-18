@@ -41,7 +41,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.LblNombre = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbPuestoLaboral = new System.Windows.Forms.ComboBox();
+            this.cmbPorcentajeLaboral = new System.Windows.Forms.ComboBox();
             this.txtBuscaApe = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -80,9 +80,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(318, 331);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.Size = new System.Drawing.Size(96, 13);
             this.label5.TabIndex = 50;
-            this.label5.Text = "Puesto Laboral";
+            this.label5.Text = "Porcentaje Laboral";
             // 
             // label4
             // 
@@ -157,14 +157,15 @@
             this.label6.TabIndex = 57;
             this.label6.Text = "Eliminar socio de la empresa";
             // 
-            // cmbPuestoLaboral
+            // cmbPorcentajeLaboral
             // 
-            this.cmbPuestoLaboral.FormattingEnabled = true;
-            this.cmbPuestoLaboral.Location = new System.Drawing.Point(429, 328);
-            this.cmbPuestoLaboral.Name = "cmbPuestoLaboral";
-            this.cmbPuestoLaboral.Size = new System.Drawing.Size(121, 21);
-            this.cmbPuestoLaboral.TabIndex = 58;
-            this.cmbPuestoLaboral.Tag = "Freelance";
+            this.cmbPorcentajeLaboral.FormattingEnabled = true;
+            this.cmbPorcentajeLaboral.Location = new System.Drawing.Point(429, 328);
+            this.cmbPorcentajeLaboral.Name = "cmbPorcentajeLaboral";
+            this.cmbPorcentajeLaboral.Size = new System.Drawing.Size(121, 21);
+            this.cmbPorcentajeLaboral.TabIndex = 58;
+            this.cmbPorcentajeLaboral.Tag = "Freelance";
+            this.cmbPorcentajeLaboral.SelectedIndexChanged += new System.EventHandler(this.cmbPorcentajeLaboral_SelectedIndexChanged);
             // 
             // txtBuscaApe
             // 
@@ -202,7 +203,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscaApe);
-            this.Controls.Add(this.cmbPuestoLaboral);
+            this.Controls.Add(this.cmbPorcentajeLaboral);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.label2);
@@ -239,7 +240,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbPuestoLaboral;
+        private System.Windows.Forms.ComboBox cmbPorcentajeLaboral;
         private System.Windows.Forms.TextBox txtBuscaApe;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnEliminar;

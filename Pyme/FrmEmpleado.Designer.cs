@@ -64,6 +64,7 @@
             this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.txtNombre.Validated += new System.EventHandler(this.txtNombre_Validated);
             // 
             // txtApellido
             // 
@@ -73,6 +74,7 @@
             this.txtApellido.TabIndex = 2;
             this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
+            this.txtApellido.Validated += new System.EventHandler(this.txtApellido_Validated);
             // 
             // txtDni
             // 
@@ -81,7 +83,8 @@
             this.txtDni.Size = new System.Drawing.Size(100, 20);
             this.txtDni.TabIndex = 3;
             this.txtDni.TextChanged += new System.EventHandler(this.txtDni_TextChanged);
-            // this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
+            this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
+            this.txtDni.Validated += new System.EventHandler(this.txtDni_Validated);
             // 
             // txtDomicilio
             // 
@@ -89,6 +92,7 @@
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Size = new System.Drawing.Size(100, 20);
             this.txtDomicilio.TabIndex = 4;
+            this.txtDomicilio.Validated += new System.EventHandler(this.txtDomicilio_Validated);
             // 
             // LblApellido
             // 

@@ -7,7 +7,7 @@ namespace Pyme
     {
         int indiceBusqueda;
         int encontro;
-        int indiceEmpleo; // toma indice del combobox
+        int indicePuestoLaboral; // toma indice del combobox
         public FrmModificar()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace Pyme
         }
         private void cmbPuestoLaboral_SelectedIndexChanged(object sender, EventArgs e)
         {
-            indiceEmpleo = cmbPuestoLaboral.SelectedIndex;
+            indicePuestoLaboral = cmbPuestoLaboral.SelectedIndex;
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -53,7 +53,7 @@ namespace Pyme
                 txtNombre.Text = Form1.EmpleadosNombre[indiceBusqueda];
                 txtDomicilio.Text = Form1.EmpleadosDomicilio[indiceBusqueda];
                 txtDni.Text = Form1.EmpleadosDni[indiceBusqueda];
-                cmbPuestoLaboral.Text = Form1.Empleo[Form1.EmpleadosEmpleosAdeudada[indiceBusqueda]];
+                cmbPuestoLaboral.Text = Form1.Empleo[indiceBusqueda];
 
                 for (int i = 0; i < Form1.Empleo.Length; i++)
                 {
@@ -68,13 +68,13 @@ namespace Pyme
                                            txtApellido.Text,
                                            txtDomicilio.Text,
                                            Convert.ToInt64(txtDni.Text),
-                                           indiceEmpleo
+                                           indicePuestoLaboral
                                            );
             Form1.EmpleadosApellido[indiceBusqueda] = Convert.ToString(txtApellido.Text);
             Form1.EmpleadosNombre[indiceBusqueda] = Convert.ToString(txtNombre.Text);
             Form1.EmpleadosDomicilio[indiceBusqueda] = Convert.ToString(txtDomicilio.Text);
             Form1.EmpleadosDni[indiceBusqueda] = Convert.ToString(txtDni.Text);
-            Form1.EmpleadosEmpleosAdeudada[indiceBusqueda] = indiceEmpleo;
+            Form1.Auxiliar[indiceBusqueda] = indicePuestoLaboral;
             txtApellido.Text = "";
             txtNombre.Text = "";
             txtDomicilio.Text = "";
@@ -86,7 +86,7 @@ namespace Pyme
             txtNombre.Enabled = false;
             btnModificar.Enabled = false;
             cmbPuestoLaboral.Enabled = false;
-            MessageBox.Show("Apellido: " + oEmpleado.Apellido + "\nNombre: " + oEmpleado.Nombre + "\nDomicilio: " + oEmpleado.Domicilio + "\nDni: " + oEmpleado.Dni + "\nPuesto de laboral: " + Form1.Empleo[indiceEmpleo]);
+            MessageBox.Show("Apellido: " + oEmpleado.Apellido + "\nNombre: " + oEmpleado.Nombre + "\nDomicilio: " + oEmpleado.Domicilio + "\nDni: " + oEmpleado.Dni + "\nPorcentaje en la empresa: " + Form1.Empleo[indicePuestoLaboral]);
         }
         private void btnAtras_Click(object sender, EventArgs e)
         {

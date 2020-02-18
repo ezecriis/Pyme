@@ -5,7 +5,7 @@ namespace Pyme
 {
     public partial class FrmSocio : Form
     {
-        int indiceEmpleo;
+        int indicePorcentaje;
         int largo;
        
         public FrmSocio()
@@ -25,7 +25,7 @@ namespace Pyme
             for (int i = 0; i < Form1.Empleo.Length; i++)
             {
                 // recorre el vector y lo carga en el combobox
-                cmbPuestoLaboral.Items.Add(Form1.Empleo[i].ToString());
+                cmbPorcentaje.Items.Add(Form1.EmpleadosPorcentajes[i].ToString());
             }
         }
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -34,24 +34,24 @@ namespace Pyme
                                            txtApellido.Text,
                                            txtDomicilio.Text,
                                            Convert.ToInt64(txtDni.Text),
-                                           indiceEmpleo
+                                           indicePorcentaje
                                            );
             Form1.EmpleadosApellido[largo - 1] = Convert.ToString(txtApellido.Text);
             Form1.EmpleadosNombre[largo - 1] = Convert.ToString(txtNombre.Text);
             Form1.EmpleadosDomicilio[largo - 1] = Convert.ToString(txtDomicilio.Text);
             Form1.EmpleadosDni[largo - 1] = Convert.ToString(txtDni.Text);
-            Form1.EmpleadosEmpleosAdeudada[largo - 1] = indiceEmpleo;
+            Form1.Auxiliar[largo - 1] = indicePorcentaje;
             txtApellido.Text = "";
             txtNombre.Text = "";
             txtDomicilio.Text = "";
             txtDni.Text = "";
-            MessageBox.Show("Apellido: " + oEmpleado.Apellido + "\nNombre: " + oEmpleado.Nombre + "\nDomicilio: " + oEmpleado.Domicilio + "\nDni: " + oEmpleado.Dni + "\nPuesto de trabajo: " + Form1.Empleo[indiceEmpleo]);
+            MessageBox.Show("Apellido: " + oEmpleado.Apellido + "\nNombre: " + oEmpleado.Nombre + "\nDomicilio: " + oEmpleado.Domicilio + "\nDni: " + oEmpleado.Dni + "\nPorcentaje de la empresa: " + Form1.EmpleadosPorcentajes[indicePorcentaje]);
         }
 
-        private void cmbPuestoLaboral_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbPorcentaje_SelectedIndexChanged(object sender, EventArgs e)
         {
             // guarda el indice del item seleccionado
-            indiceEmpleo = cmbPuestoLaboral.SelectedIndex;
+            indicePorcentaje = cmbPorcentaje.SelectedIndex;
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)

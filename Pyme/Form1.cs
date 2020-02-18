@@ -16,6 +16,17 @@ namespace Pyme
             "MUÑOZ",
             "QUIROGA"
        };
+        public static string[] EmpleadosPorcentajes = new string[]
+        {
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "100%",
+            "50%",
+            "70%",
+            "90%"
+        };
         public static string[] EmpleadosNombre = new string[]
         {
             "JOSE",
@@ -23,7 +34,7 @@ namespace Pyme
             "DANIEL",
             "LUCIANO",
             "EZEQUIEL",
-            "LEDESMA",
+            "CARLA",
             "YESICA",
             "LUCIO"
        };
@@ -33,37 +44,26 @@ namespace Pyme
             "Gianastacio 2882",
             "Binon 3663",
             "Blas Parera 2478",
+            "Balcarce 1668",
             "Arieta 3602",
             "Alma Fuerte 2410",
-            "Balcarce 1668",
             "Gabriel Miró 2876"
        };
         public static string[] EmpleadosDni = new string[]
         {
-            "38402970",
             "24028059",
             "22813049",
             "36626690",
             "35067040",
+            "38402970",
             "30280510",
             "29871488",
             "50153046"
        };
-        public static int[] EmpleadosEmpleosAdeudada = new int[]
+        public static int[] Auxiliar = new int[]
         {
            0,1,2,3,4,5,6,7
 
-       };
-        public static string[] Empleo = new string[]
-        {
-            "Lead",
-            "Qa",
-            "Desarrolador",
-            "RRHU",
-            "SSR",
-            "Gerente",
-            "Developer",
-            "Principal"
        };
         public static string[] SocioApellido = new string[]
         {
@@ -93,32 +93,54 @@ namespace Pyme
             "Gianastacio 2882",
             "Binon 3663",
             "Blas Parera 2478",
+            "Balcarce 1668",
             "Arieta 3602",
             "Alma Fuerte 2410",
-            "Balcarce 1668",
             "Gabriel Miró 2876"
        };
         public static string[] SocioDni = new string[]
         {
-            "38402970",
             "24028059",
             "22813049",
             "36626690",
             "35067040",
+            "38402970",
             "30280510",
             "29871488",
             "50153046"
        };
-        public static string[] SocioModulos = new string[]
+        public static string[] PorcentajeSocios = new string[]
         {
-            "4",
-            "5",
-            "6",
-            "13",
-            "8",
-            "3",
-            "6",
-            "8"
+            "20%",
+            "10%",
+            "30%",
+            "40%",
+            "60%",
+            "70%",
+            "90%",
+            "100%"
+       };
+        public static string[] PuestoEmpleados = new string[]
+        {
+            "Developer",
+            "QQA",
+            "Principal",
+            "Lead",
+            "Junior",
+            "Analista",
+            "Desarrollador",
+            "SSR"
+       };
+        public static string[] Empleo = new string[]
+        {
+            "Lead",
+            "Qa",
+            "Desarrolador",
+            "RRHU",
+            "SSR",
+            "Gerente",
+            "Developer",
+            "Principal"
        };
 
         public static object Empleos { get; internal set; }
@@ -172,6 +194,11 @@ namespace Pyme
         {
             FrmSocioEliminar oFrmSocioEliminar = new FrmSocioEliminar();
             oFrmSocioEliminar.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

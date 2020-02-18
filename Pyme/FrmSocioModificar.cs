@@ -7,7 +7,7 @@ namespace Pyme
     {
         int indiceBusqueda;
         int encontro;
-        int indiceEmpleo; // toma indice dek combobox
+        int indicePorcentaje; // toma indice dek combobox
         public FrmSocioModificar()
         {
             InitializeComponent();
@@ -20,11 +20,14 @@ namespace Pyme
             txtDomicilio.Enabled = false;
             txtNombre.Enabled = false;
             btnModificar.Enabled = false;
-            cmbPuestoLaboral.Enabled = false;
+            cmbPorcentajeLaboral.Enabled = false;
         }
         private void cmbPuestoLaboral_SelectedIndexChanged(object sender, EventArgs e)
         {
-            indiceEmpleo = cmbPuestoLaboral.SelectedIndex;
+        }
+        private void cmbPorcentajeLaboral_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            indicePorcentaje = cmbPorcentajeLaboral.SelectedIndex;
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -49,17 +52,17 @@ namespace Pyme
                 txtDomicilio.Enabled = true;
                 txtNombre.Enabled = true;
                 btnModificar.Enabled = true;
-                cmbPuestoLaboral.Enabled = true;
+                cmbPorcentajeLaboral.Enabled = true;
                 txtApellido.Text = Form1.EmpleadosApellido[indiceBusqueda];
                 txtNombre.Text = Form1.EmpleadosNombre[indiceBusqueda];
                 txtDomicilio.Text = Form1.EmpleadosDomicilio[indiceBusqueda];
                 txtDni.Text = Form1.EmpleadosDni[indiceBusqueda];
-                cmbPuestoLaboral.Text = Form1.Empleo[Form1.EmpleadosEmpleosAdeudada[indiceBusqueda]];
+                cmbPorcentajeLaboral.Text = Form1.EmpleadosPorcentajes[Form1.Auxiliar[indiceBusqueda]];
 
-                for (int i = 0; i < Form1.Empleo.Length; i++)
+                for (int i = 0; i < Form1.EmpleadosPorcentajes.Length; i++)
                 {
                     // recorre el vector y lo carga en el combobox
-                    cmbPuestoLaboral.Items.Add(Form1.Empleo[i].ToString());
+                    cmbPorcentajeLaboral.Items.Add(Form1.EmpleadosPorcentajes[i].ToString());
                 }
             }
         }
@@ -69,25 +72,25 @@ namespace Pyme
                                            txtApellido.Text,
                                            txtDomicilio.Text,
                                            Convert.ToInt64(txtDni.Text),
-                                           indiceEmpleo
+                                           indicePorcentaje
                                            );
             Form1.EmpleadosApellido[indiceBusqueda] = Convert.ToString(txtApellido.Text);
             Form1.EmpleadosNombre[indiceBusqueda] = Convert.ToString(txtNombre.Text);
             Form1.EmpleadosDomicilio[indiceBusqueda] = Convert.ToString(txtDomicilio.Text);
             Form1.EmpleadosDni[indiceBusqueda] = Convert.ToString(txtDni.Text);
-            Form1.EmpleadosEmpleosAdeudada[indiceBusqueda] = indiceEmpleo;
+            Form1.Auxiliar[indiceBusqueda] = indicePorcentaje;
             txtApellido.Text = "";
             txtNombre.Text = "";
             txtDomicilio.Text = "";
             txtDni.Text = "";
-            cmbPuestoLaboral.Text = "";
+            cmbPorcentajeLaboral.Text = "";
             txtApellido.Enabled = false;
             txtDni.Enabled = false;
             txtDomicilio.Enabled = false;
             txtNombre.Enabled = false;
             btnModificar.Enabled = false;
-            cmbPuestoLaboral.Enabled = false;
-            MessageBox.Show("Apellido: " + oEmpleado.Apellido + "\nNombre: " + oEmpleado.Nombre + "\nDomicilio: " + oEmpleado.Domicilio + "\nDni: " + oEmpleado.Dni + "\nPuesto de laboral: " + Form1.Empleo[indiceEmpleo]);
+            cmbPorcentajeLaboral.Enabled = false;
+            MessageBox.Show("Apellido: " + oEmpleado.Apellido + "\nNombre: " + oEmpleado.Nombre + "\nDomicilio: " + oEmpleado.Domicilio + "\nDni: " + oEmpleado.Dni + "\nPorcentaje en la empresa: " + Form1.EmpleadosPorcentajes[indicePorcentaje]);
         }
         private void btnAtras_Click(object sender, EventArgs e)
         {
@@ -108,6 +111,5 @@ namespace Pyme
         private void FrmSocioModificar_TextChanged(object sender, EventArgs e)
         {
         }
-
     }
 }

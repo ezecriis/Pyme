@@ -24,6 +24,12 @@ namespace Pyme
             txtNombre.Enabled = false;
             btnEliminar.Enabled = false;
             cmbPorcentajeLaboral.Enabled = false;
+
+            for (int i = 0; i < Form1.Porcentajes.Length; i++)
+            {
+                // recorre el vector y lo carga en el combobox
+                cmbPorcentajeLaboral.Items.Add(Form1.Porcentajes[i].ToString());
+            }
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -49,12 +55,7 @@ namespace Pyme
                 txtNombre.Text = Form1.EmpleadosNombre[indiceBusqueda];
                 txtDomicilio.Text = Form1.EmpleadosDomicilio[indiceBusqueda];
                 txtDni.Text = Form1.EmpleadosDni[indiceBusqueda];
-                cmbPorcentajeLaboral.Text = Form1.EmpleadosPorcentajes[indiceBusqueda];
-                for (int i = 0; i < Form1.EmpleadosPorcentajes.Length; i++)
-                {
-                    // recorre el vector y lo carga en el combobox
-                    cmbPorcentajeLaboral.Items.Add(Form1.EmpleadosPorcentajes[i].ToString());
-                }
+                cmbPorcentajeLaboral.Text = Form1.Porcentajes[Form1.PorcentajeSocios[indiceBusqueda]];
             }
         }
 
@@ -70,7 +71,7 @@ namespace Pyme
             Form1.EmpleadosNombre[indiceBusqueda] = "";
             Form1.EmpleadosDomicilio[indiceBusqueda] = "";
             Form1.EmpleadosDni[indiceBusqueda] = "";
-            Form1.Auxiliar[indiceBusqueda] = 0;
+            Form1.PorcentajeSocios[indiceBusqueda] = 0;
             txtApellido.Text = "";
             txtNombre.Text = "";
             txtDomicilio.Text = "";
@@ -90,7 +91,6 @@ namespace Pyme
 
         private void cmbPorcentajeLaboral_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

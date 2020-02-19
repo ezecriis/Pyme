@@ -199,7 +199,7 @@
             this.cmbPuestoLaboral.Size = new System.Drawing.Size(121, 21);
             this.cmbPuestoLaboral.TabIndex = 29;
             this.cmbPuestoLaboral.Tag = "Freelance";
-            this.cmbPuestoLaboral.SelectedIndexChanged += new System.EventHandler(this.btnBuscar_TextChanged);
+            this.cmbPuestoLaboral.SelectedIndexChanged += new System.EventHandler(this.cmbPuestoLaboral_SelectedIndexChanged_1);
             // 
             // FrmModificar
             // 

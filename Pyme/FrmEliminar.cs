@@ -44,7 +44,7 @@ namespace Pyme
                 txtNombre.Text = Form1.EmpleadosNombre[indiceBusqueda];
                 txtDomicilio.Text = Form1.EmpleadosDomicilio[indiceBusqueda];
                 txtDni.Text = Form1.EmpleadosDni[indiceBusqueda];
-                cmbPuestoLaboral.Text = Form1.Empleo[Form1.Auxiliar[indiceBusqueda]];
+                cmbPuestoLaboral.Text = Form1.Empleo[Form1.PuestoEmpleados[indiceBusqueda]];
                 for (int i = 0; i < Form1.Empleo.Length; i++)
                 {
                     //recorre el vector y lo carga en el combobox
@@ -64,7 +64,7 @@ namespace Pyme
             Form1.EmpleadosNombre[indiceBusqueda] = "";
             Form1.EmpleadosDomicilio[indiceBusqueda] = "";
             Form1.EmpleadosDni[indiceBusqueda] = "";
-            Form1.Auxiliar[indiceBusqueda] = 0;
+            Form1.PuestoEmpleados[indiceBusqueda] = 0;
             txtApellido.Text = "";
             txtNombre.Text = "";
             txtDomicilio.Text = "";

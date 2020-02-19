@@ -138,6 +138,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 42;
+            // this.txtNombre.Validated += new System.EventHandler(this.txtNombre_Validated);
             // 
             // LblNombre
             // 

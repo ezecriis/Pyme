@@ -21,6 +21,12 @@ namespace Pyme
             txtNombre.Enabled = false;
             btnModificar.Enabled = false;
             cmbPorcentajeLaboral.Enabled = false;
+
+            for (int i = 0; i < Form1.Porcentajes.Length; i++)
+            {
+                // recorre el vector y lo carga en el combobox
+                cmbPorcentajeLaboral.Items.Add(Form1.Porcentajes[i].ToString());
+            }
         }
         private void cmbPuestoLaboral_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -57,13 +63,7 @@ namespace Pyme
                 txtNombre.Text = Form1.EmpleadosNombre[indiceBusqueda];
                 txtDomicilio.Text = Form1.EmpleadosDomicilio[indiceBusqueda];
                 txtDni.Text = Form1.EmpleadosDni[indiceBusqueda];
-                cmbPorcentajeLaboral.Text = Form1.EmpleadosPorcentajes[Form1.Auxiliar[indiceBusqueda]];
-
-                for (int i = 0; i < Form1.EmpleadosPorcentajes.Length; i++)
-                {
-                    // recorre el vector y lo carga en el combobox
-                    cmbPorcentajeLaboral.Items.Add(Form1.EmpleadosPorcentajes[i].ToString());
-                }
+                cmbPorcentajeLaboral.Text = Form1.Porcentajes[Form1.PorcentajeSocios[indiceBusqueda]];
             }
         }
         private void btnModificar_Click(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace Pyme
             Form1.EmpleadosNombre[indiceBusqueda] = Convert.ToString(txtNombre.Text);
             Form1.EmpleadosDomicilio[indiceBusqueda] = Convert.ToString(txtDomicilio.Text);
             Form1.EmpleadosDni[indiceBusqueda] = Convert.ToString(txtDni.Text);
-            Form1.Auxiliar[indiceBusqueda] = indicePorcentaje;
+            Form1.PorcentajeSocios[indiceBusqueda] = indicePorcentaje;
             txtApellido.Text = "";
             txtNombre.Text = "";
             txtDomicilio.Text = "";
@@ -90,7 +90,7 @@ namespace Pyme
             txtNombre.Enabled = false;
             btnModificar.Enabled = false;
             cmbPorcentajeLaboral.Enabled = false;
-            MessageBox.Show("Apellido: " + oEmpleado.Apellido + "\nNombre: " + oEmpleado.Nombre + "\nDomicilio: " + oEmpleado.Domicilio + "\nDni: " + oEmpleado.Dni + "\nPorcentaje en la empresa: " + Form1.EmpleadosPorcentajes[indicePorcentaje]);
+            MessageBox.Show("Apellido: " + oEmpleado.Apellido + "\nNombre: " + oEmpleado.Nombre + "\nDomicilio: " + oEmpleado.Domicilio + "\nDni: " + oEmpleado.Dni + "\nPorcentaje en la empresa: " + Form1.Porcentajes[indicePorcentaje]);
         }
         private void btnAtras_Click(object sender, EventArgs e)
         {

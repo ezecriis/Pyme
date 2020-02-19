@@ -86,21 +86,21 @@
             // nuevoToolStripMenuItem1
             // 
             this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
-            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
             this.nuevoToolStripMenuItem1.Text = "Nuevo";
             this.nuevoToolStripMenuItem1.Click += new System.EventHandler(this.nuevoSocioToolStripMenuItem1_Click);
             // 
             // modificarSocioToolStripMenuItem1
             // 
             this.modificarSocioToolStripMenuItem1.Name = "modificarSocioToolStripMenuItem1";
-            this.modificarSocioToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.modificarSocioToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
             this.modificarSocioToolStripMenuItem1.Text = "Modificar";
             this.modificarSocioToolStripMenuItem1.Click += new System.EventHandler(this.modificarSocioToolStripMenuItem1_Click);
             // 
             // eliminarSocioToolStripMenuItem1
             // 
             this.eliminarSocioToolStripMenuItem1.Name = "eliminarSocioToolStripMenuItem1";
-            this.eliminarSocioToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.eliminarSocioToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
             this.eliminarSocioToolStripMenuItem1.Text = "Eliminar";
             this.eliminarSocioToolStripMenuItem1.Click += new System.EventHandler(this.eliminarSocioToolStripMenuItem1_Click);
             // 
@@ -128,10 +128,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Pyme.Properties.Resources.fondo1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(608, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empresa";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);

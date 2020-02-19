@@ -50,7 +50,7 @@ namespace Pyme
                 Form1.EmpleadosNombre[largo - 1] = Convert.ToString(txtNombre.Text);
                 Form1.EmpleadosDomicilio[largo - 1] = Convert.ToString(txtDomicilio.Text);
                 Form1.EmpleadosDni[largo - 1] = Convert.ToString(txtDni.Text);
-                Form1.Auxiliar[largo - 1] = indiceEmpleo;
+                Form1.PuestoEmpleados[largo - 1] = indiceEmpleo;
                 txtApellido.Text = "";
                 txtNombre.Text = "";
                 txtDomicilio.Text = "";
@@ -188,7 +188,5 @@ namespace Pyme
         private void comboBoxPuestoLaboral_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
-
-        
     }
 }

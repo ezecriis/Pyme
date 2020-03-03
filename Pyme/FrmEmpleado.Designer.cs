@@ -54,7 +54,6 @@
             this.LblNombre.Size = new System.Drawing.Size(44, 13);
             this.LblNombre.TabIndex = 0;
             this.LblNombre.Text = "Nombre";
-            this.LblNombre.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtNombre
             // 
@@ -62,7 +61,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 1;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             this.txtNombre.Validated += new System.EventHandler(this.txtNombre_Validated);
             // 
@@ -72,7 +70,6 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 2;
-            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             this.txtApellido.Validated += new System.EventHandler(this.txtApellido_Validated);
             // 
@@ -82,7 +79,6 @@
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(100, 20);
             this.txtDni.TabIndex = 3;
-            this.txtDni.TextChanged += new System.EventHandler(this.txtDni_TextChanged);
             this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
             this.txtDni.Validated += new System.EventHandler(this.txtDni_Validated);
             // 

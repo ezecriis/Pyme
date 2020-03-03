@@ -7,7 +7,7 @@ namespace Pyme
     {
         int indiceBusqueda;
         int encontro;
-        int indicePorcentaje; // toma indice dek combobox
+        int indicePorcentaje; // toma indice del combobox
         public FrmSocioModificar()
         {
             InitializeComponent();

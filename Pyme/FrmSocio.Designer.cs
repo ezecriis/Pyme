@@ -129,7 +129,6 @@
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 14;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
-            // this.txtNombre.Validated += new System.EventHandler(this.txtNombre_Validated);
             // 
             // LblNombre
             // 

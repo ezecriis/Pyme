@@ -138,7 +138,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 42;
-            // this.txtNombre.Validated += new System.EventHandler(this.txtNombre_Validated);
             // 
             // LblNombre
             // 
@@ -166,7 +165,6 @@
             this.cmbPorcentajeLaboral.Size = new System.Drawing.Size(121, 21);
             this.cmbPorcentajeLaboral.TabIndex = 58;
             this.cmbPorcentajeLaboral.Tag = "Freelance";
-            this.cmbPorcentajeLaboral.SelectedIndexChanged += new System.EventHandler(this.cmbPorcentajeLaboral_SelectedIndexChanged);
             // 
             // txtBuscaApe
             // 

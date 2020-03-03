@@ -88,9 +88,5 @@ namespace Pyme
                 btnBuscar.Focus();
             }
         }
-
-        private void cmbPorcentajeLaboral_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
     }
 }

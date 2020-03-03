@@ -156,37 +156,5 @@ namespace Pyme
                 txtNombre.Focus();
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtApellido_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDni_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void txtPuestoLaboral_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void comboBoxPuestoLaboral_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
     }
 }
